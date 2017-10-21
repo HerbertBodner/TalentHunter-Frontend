@@ -13,11 +13,26 @@
 <br>
 <br>
 <br>
-<div class="container">
-  <div class="sidebar">
-      <nav>
-          <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-        </nav>
+<div class="container-fluid">
+  <div class="row">
+  <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
+    
+    <ul class="nav nav-pills flex-column">
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="/dashboard" routerLinkActive="active">Dashboard <span class="sr-only">(current)</span></a>
+      </li>
+      <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
+        <ul class="nav nav-pills flex-column">
+          <li class="nav-item">
+            <!-- <a class="nav-link" href="#">Reports</a> -->
+          </li>
+        </ul>
+      </nav>
+    </ul>
+  </nav>
+
+  <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
+      <router-outlet></router-outlet>
+    </main>
   </div>
-    <router-outlet></router-outlet>
 </div>
