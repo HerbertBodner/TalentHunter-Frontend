@@ -18,7 +18,7 @@ export class ThDashboardComponent implements OnInit {
     
     this.positions = [
         {
-          Name: "Senior .Net Backend Developer", AmountApplied: 7, AmountRejected: 1, AmountForReview: 6,
+          Id: 1, Name: "Senior .Net Backend Developer", AmountApplied: 7, AmountRejected: 1, AmountForReview: 6,
             AssessmentStatistics: [
               {AssessmentTypeName: "No Fit", Color: 0, Amount: 2},
               {AssessmentTypeName: "Adequate Fit", Color: 0, Amount: 2},
@@ -28,7 +28,7 @@ export class ThDashboardComponent implements OnInit {
             ] 
         },
         {
-          Name: "Junior .Net Backend Developer", AmountApplied: 25, AmountRejected: 3, AmountForReview: 22,
+          Id: 2, Name: "Junior .Net Backend Developer", AmountApplied: 25, AmountRejected: 3, AmountForReview: 22,
             AssessmentStatistics: [
               {AssessmentTypeName: "No Fit", Color: 0, Amount: 14},
               {AssessmentTypeName: "Adequate Fit", Color: 0, Amount: 12},
