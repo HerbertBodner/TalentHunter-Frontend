@@ -1,2 +1,5 @@
 <h2>Dashboard</h2>
-<dashboard-position></dashboard-position>
+<div *ngFor="let pos of positions">
+  <dashboard-position [position]="pos"></dashboard-position>
+  <br>
+</div>

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { DashboardPosition } from '../../models/dashboard-position';
+import { DayAppliedStatistic } from '../../models/day-applied-statistic';
 
 @Component({
   selector: 'dashboard-position',
@@ -8,19 +9,46 @@ import { DashboardPosition } from '../../models/dashboard-position';
 })
 export class PositionComponent implements OnInit {
 
+  @Input()
   position: DashboardPosition;
+  StatisticsForLastWeek:DayAppliedStatistic[];
   constructor() { }
 
   ngOnInit() {
-    this.position = { Name: "Senior .Net Backend Developer", AmountApplied: 25, AmountRejected: 3, AmountForReview: 22,
-    AssessmentStatistics: [
-        {AssessmentTypeName: "No Fit", Color: 0, Amount: 14},
-        {AssessmentTypeName: "Adequate Fit", Color: 0, Amount: 12},
-        {AssessmentTypeName: "Good Fit", Color: 0, Amount: 3},
-        {AssessmentTypeName: "Very Good Fit", Color: 0, Amount: 0},
-        {AssessmentTypeName: "Awesome Fit", Color: 0, Amount: 0},
-      ] 
-    };
+    
+
+    this.StatisticsForLastWeek = [
+      { Day: new Date(2017,10, 21), 
+        DayStatistics:[ 
+          {Source: "Karriere", Color: 5000, Amount: 3},
+          {Source: "Stepstone", Color: 7000, Amount: 5} 
+        ]
+      },
+      { Day: new Date(2017,10, 20), 
+        DayStatistics:[ 
+          {Source: "Karriere", Color: 5000, Amount: 1},
+          {Source: "Stepstone", Color: 7000, Amount: 2} 
+        ]
+      },
+      { Day: new Date(2017,10, 19), 
+        DayStatistics:[ 
+          {Source: "Karriere", Color: 5000, Amount: 0},
+          {Source: "Stepstone", Color: 7000, Amount: 1} 
+        ]
+      },
+      { Day: new Date(2017,10, 18), 
+        DayStatistics:[ 
+          {Source: "Karriere", Color: 5000, Amount: 1},
+          {Source: "Stepstone", Color: 7000, Amount: 1} 
+        ]
+      },
+      { Day: new Date(2017,10, 17), 
+        DayStatistics:[ 
+          {Source: "Karriere", Color: 5000, Amount: 2},
+          {Source: "Stepstone", Color: 7000, Amount: 0} 
+        ]
+      }
+    ];
   }
 
 }
