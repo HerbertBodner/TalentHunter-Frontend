@@ -1,19 +1,19 @@
-<div class="card border-warning">
+<div class="card bg-light">
 
-  <div class="card-header bg-warning">
-    <h4>{{position.Name}}
-      <span class="small">
+  <div class="card-header">
+    <h3>{{position.Name}}
+      <span class="small float-right">
       <a href="#" class="badge badge-info">Applied: {{position.AmountApplied}}</a>
       <a href="#" class="badge badge-danger">Rejected: {{position.AmountRejected}}</a>
       </span>
-  </h4>
+  </h3>
   </div>
   
   <div class="card-body">
     <div class="row">
       <div class="col-sm">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <h5 class="card-title">Applications within last 7 days</h5>
+        <p class="card-text">TODO: Somewhere in the future this is going to show a stack bar chart of how many candidates applied for this position within the last 7 days.</p>
       </div>
 
       <div class="col-sm">
@@ -21,7 +21,7 @@
         <ul class="list-group">
           <li *ngFor="let assessmentStat of position.AssessmentStatistics" class="list-group-item d-flex justify-content-between align-items-center">
             {{assessmentStat.AssessmentTypeName}}
-            <span class="badge badge-primary">
+            <span class="badge badge-secondary">
                 {{assessmentStat.Amount}}
             </span>
           </li>
@@ -38,7 +38,7 @@
         <div class="col-sm">
           
         <h5 class="float-right">
-        Applications to review:
+        Applications to review and assess:
         <div class="badge badge-primary">
             {{position.AmountForReview}}
         </div>
