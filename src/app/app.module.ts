@@ -2,10 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { ThDashboardComponent } from './th-dashboard/th-dashboard.component';
+import { PositionComponent } from './th-dashboard/position/position.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ThDashboardComponent,
+    PositionComponent
   ],
   imports: [
     BrowserModule
