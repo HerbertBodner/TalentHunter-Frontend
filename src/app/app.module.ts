@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 import { AppComponent } from './app.component';
 import { ThDashboardComponent } from './th-dashboard/th-dashboard.component';
@@ -15,7 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
     ListCandidatesComponent
   ],
   imports: [
-    BrowserModule, AppRoutingModule
+    BrowserModule, AppRoutingModule, LazyLoadImageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
