@@ -15,8 +15,9 @@
       </a>
       </td>
       <td>{{candidate.Birthday}}</td>
-      <td *ngFor="let attachement of candidate.Attachments">
-        <th-document-preview 
+      <td>
+         
+        <th-document-preview *ngFor="let attachement of candidate.Attachments"
           [Image]="attachement.PreviewImagePath" 
           [FileName]="attachement.FileName"
           [Path]="attachement.Path">
