@@ -10,17 +10,17 @@
   <tbody *ngFor="let candidate of candidates">
     <tr>
       <td>
-        <a href="/candidates/{{candidate.Id}}">
-        {{candidate.FirstName}} {{candidate.LastName}}
+        <a href="/candidates/{{candidate.id}}">
+        {{candidate.firstName}} {{candidate.lastName}}
       </a>
       </td>
-      <td>{{candidate.Birthday}}</td>
+      <td>{{candidate.birthday}}</td>
       <td>
          
-        <th-document-preview *ngFor="let attachement of candidate.Attachments"
-          [Image]="attachement.PreviewImagePath" 
-          [FileName]="attachement.FileName"
-          [Path]="attachement.Path">
+        <th-document-preview *ngFor="let attachement of candidate.attachments"
+          [Image]="attachement.previewImagePath" 
+          [FileName]="attachement.fileName"
+          [Path]="attachement.path">
         </th-document-preview>
       </td>
     </tr>
